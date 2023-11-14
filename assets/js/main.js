@@ -64,23 +64,21 @@ const sr = ScrollReveal({
 
 /*SCROLL HOME*/
 sr.reveal(".home-title", {});
-sr.reveal(".button", { delay: 150 });
-sr.reveal(".home-img", { delay: 100 });
-sr.reveal(".home-social-icon", { interval: 100 });
+sr.reveal(".button", { delay: 10 });
+sr.reveal(".home-img", { delay: 10 });
+sr.reveal(".home-social-icon", { interval: 10 });
 
 /*SCROLL ABOUT*/
 sr.reveal(".about-img", {});
-sr.reveal(".about-subtitle", { delay: 50 });
-sr.reveal(".about-text", { delay: 50 });
+sr.reveal(".about-subtitle", { delay: 10 });
+sr.reveal(".about-text", { delay: 10 });
 
 /*SCROLL SKILLS*/
-sr.reveal(".skills-subtitle", {});
-sr.reveal(".skills-text", {});
-sr.reveal(".skills-data", { interval: 20 });
+
 
 
 /*SCROLL projects*/
-sr.reveal(".project-img", { interval: 50 });
+sr.reveal(".project-img", { interval: 10 });
 
 
 
