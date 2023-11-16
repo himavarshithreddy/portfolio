@@ -33,15 +33,9 @@ window.addEventListener("scroll", () => {
   })
 })
 
-// function linkAction() {
-//   /*Active link*/
-//   navLinks.forEach((n) => n.classList.remove("active"));
-//   this.classList.add("active");
 
-//   /*Remove menu mobile*/
 const navMenu = document.getElementById("nav-menu");
-//   navMenu.classList.remove("show");
-// }
+
 navLinks.forEach((n) => n.addEventListener("click", () => { navMenu.classList.remove("show") }));
 
 /*===== COPY Email =====*/
@@ -83,17 +77,50 @@ sr.reveal(".project-img", { interval: 10 });
 
 
 
-  var messageArr = ["Tech Enthusiast", "Frontend Developer", "Backend Developer"];
-  var textPosition = 0;
-  var speed = 100;
+var messageArr = ["Tech Enthusiast", "Web Developer"];
+var currentMessageIndex = 0;
+var textPosition = 0;
+var speed = 100;
+var delayBetweenMessages = 250; 
 
-  typewriter = () => {
-    // for(let i = 0; i < messageArr.length; i++) {
-    document.querySelector("#jobTitle").innerHTML = messageArr[0].substring(0, textPosition)  ;
-    if(textPosition ++  != messageArr[0].length)
-        setTimeout(typewriter, speed)
-  }
+var jobTitleElement = document.querySelector("#jobTitle");
+var placeholder = document.createElement('span');
+placeholder.innerHTML = '&nbsp;'; 
+jobTitleElement.appendChild(placeholder);
 
+typewriter = () => {
+    var currentMessage = messageArr[currentMessageIndex];
+    var displayedText = currentMessage.substring(0, textPosition);
+    
+   
+    jobTitleElement.replaceChild(document.createTextNode(displayedText), jobTitleElement.firstChild);
 
-  window.addEventListener("load" , typewriter);
+    if (textPosition < currentMessage.length) {
+        textPosition++;
+        setTimeout(typewriter, speed);
+    } else {
+        
+        setTimeout(backspace, delayBetweenMessages);
+    }
+}
+
+backspace = () => {
+    var currentMessage = messageArr[currentMessageIndex];
+    var displayedText = currentMessage.substring(0, textPosition);
+
+    jobTitleElement.replaceChild(document.createTextNode(displayedText), jobTitleElement.firstChild);
+
+    if (textPosition > 0) {
+        textPosition--;
+        setTimeout(backspace, speed);
+    } else {
+      
+        jobTitleElement.replaceChild(document.createTextNode('\u00A0'), jobTitleElement.firstChild); // Use a non-breaking space
+        textPosition = 0;
+        currentMessageIndex = (currentMessageIndex + 1) % messageArr.length;
+        setTimeout(typewriter, delayBetweenMessages);
+    }
+}
+
+window.addEventListener("load", typewriter);
 
