@@ -1,4 +1,4 @@
-/*===== MENU SHOW =====*/
+
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId);
@@ -11,7 +11,7 @@ const showMenu = (toggleId, navId) => {
 };
 showMenu("nav-toggle", "nav-menu");
 
-/*===== ACTIVE AND REMOVE MENU =====*/
+
 const navLinks = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll(".section");
 
@@ -38,7 +38,7 @@ const navMenu = document.getElementById("nav-menu");
 
 navLinks.forEach((n) => n.addEventListener("click", () => { navMenu.classList.remove("show") }));
 
-/*===== COPY Email =====*/
+
 const copy = document.getElementById("copy");
 copy.addEventListener("click", () => {
   navigator.clipboard.writeText("himavarshithreddy@gmail.com");
@@ -48,7 +48,6 @@ copy.addEventListener("click", () => {
   }, 1000);
 });
 
-/*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
   origin: "top",
   distance: "80px",
@@ -56,22 +55,22 @@ const sr = ScrollReveal({
   reset: true,
 });
 
-/*SCROLL HOME*/
+
 sr.reveal(".home-title", {});
 sr.reveal(".button", { delay: 10 });
 sr.reveal(".home-img", { delay: 10 });
 sr.reveal(".home-social-icon", { interval: 10 });
 
-/*SCROLL ABOUT*/
+
 sr.reveal(".about-img", {});
 sr.reveal(".about-subtitle", { delay: 10 });
 sr.reveal(".about-text", { delay: 10 });
 
-/*SCROLL SKILLS*/
 
 
 
-/*SCROLL projects*/
+
+
 sr.reveal(".project-img", { interval: 10 });
 
 
