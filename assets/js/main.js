@@ -57,21 +57,21 @@ const sr = ScrollReveal({
 
 
 sr.reveal(".home-title", {});
-sr.reveal(".button", { delay: 10 });
-sr.reveal(".home-img", { delay: 10 });
-sr.reveal(".home-social-icon", { interval: 10 });
+sr.reveal(".button", { delay: 1 });
+sr.reveal(".home-img", { delay: 1 });
+sr.reveal(".home-social-icon", { interval: 1 });
 
 
 sr.reveal(".about-img", {});
-sr.reveal(".about-subtitle", { delay: 10 });
-sr.reveal(".about-text", { delay: 10 });
+sr.reveal(".about-subtitle", { delay: 1 });
+sr.reveal(".about-text", { delay: 1 });
 
 
 
 
 
 
-sr.reveal(".project-img", { interval: 10 });
+sr.reveal(".project-img", { interval: 1 });
 
 
 
