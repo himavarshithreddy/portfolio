@@ -158,6 +158,17 @@ img {
     background-color: var(--second-color);
     transition: 0.5s;
   }
+  .home-social {
+    display: flex;
+    flex-direction: row !important  ;
+  }
+  .home-social-icon {
+    width: max-content;
+    
+    font-size: 1.5rem;
+    padding: 10px !important;
+    color: var(--second-color) !important;
+    
 }
 .nav-item {
   margin-bottom: var(--mb-4);
@@ -559,7 +570,7 @@ img.man-icons {
   .home-social {
     padding-top: 0;
     padding-bottom: 2.5rem;
-    flex-direction: row;
+    flex-direction: row !important;
     align-self: flex-end;
   }
   .home-social-icon {
